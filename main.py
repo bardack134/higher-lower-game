@@ -64,7 +64,7 @@ def game(element_A, element_B):
         # Imprime la información de los elementos A y B
         print(f"Compare A: {element_A['name']}, a {element_A['description']} from {element_A['country']}")
         print(vs)
-        print(f"Compare B: {element_B['name']}, a {element_B['description']} from {element_B['country']}")
+        print(f"Againts B: {element_B['name']}, a {element_B['description']} from {element_B['country']}")
         print()
 
         # Solicita al usuario que adivine quién tiene más seguidores
