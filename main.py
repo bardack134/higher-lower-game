@@ -28,8 +28,11 @@ def compare(element_A, element_B):
     follower_count_A=data[position_element_A]["follower_count"]
     follower_count_B=data[position_element_B]["follower_count"]
 
+    if element_A==element_B:
+        element_B=random.choice(data)
+        
     # Compara los números de seguidores de los dos elementos
-    if follower_count_B>follower_count_A:
+    elif follower_count_B>follower_count_A:
         
         return "B"
     else:
@@ -79,7 +82,11 @@ def game(element_A, element_B):
 
             # El elemento B se convierte en el nuevo elemento A
             element_A=element_B
+            
             element_B=random.choice(data)
+            
+            if element_A==element_B:
+                element_B=random.choice(data)
 
         else:
             # Si la respuesta es incorrecta, termina el juego
