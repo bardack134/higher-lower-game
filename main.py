@@ -17,6 +17,8 @@ element_A=random.choice(data)
 # Selecciona otro elemento aleatorio de la lista data y lo asigna a element_B
 element_B=random.choice(data)
 
+
+
 # Define la función compare que compara dos elementos
 def compare(element_A, element_B):
 
@@ -53,18 +55,16 @@ def game(element_A, element_B):
         print(f" The element B is {element_B}")
         print()
 
-        # Obtiene las posiciones de los elementos en la lista data
-        position_element_A=data.index(element_A, 0, 49)
-        position_element_B=data.index(element_B, 0, 49)        
+             
 
         # Accede al número de seguidores de los elementos
-        follower_count_A=data[position_element_A]["follower_count"]
-        follower_count_B=data[position_element_B]["follower_count"]
+        follower_count_A=element_A["follower_count"]
+        follower_count_B=element_B["follower_count"]
 
         # Imprime la información de los elementos A y B
-        print(f"Compare A: {data[position_element_A]['name']}, {data[position_element_A]['description']} from {data[position_element_A]['country']}")
+        print(f"Compare A: {element_A['name']}, a {element_A['description']} from {element_A['country']}")
         print(vs)
-        print(f"Compare B: {data[position_element_B]['name']}, {data[position_element_B]['description']} from {data[position_element_B]['country']}")
+        print(f"Compare B: {element_B['name']}, a {element_B['description']} from {element_B['country']}")
         print()
 
         # Solicita al usuario que adivine quién tiene más seguidores
@@ -77,7 +77,7 @@ def game(element_A, element_B):
 
             # Si la respuesta es correcta, incrementa el puntaje
             score+=1
-            print(f"Correct, {data[position_element_A]['name']} has {follower_count_A} and {data[position_element_B]['name']} has {follower_count_B}. your score is {score}")
+            print(f"Correct, {element_A['name']} has {follower_count_A} and {element_B['name']} has {follower_count_B}. your score is {score}")
             print()
 
             # El elemento B se convierte en el nuevo elemento A
