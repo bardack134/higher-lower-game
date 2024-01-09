@@ -5,10 +5,10 @@ from Logos import *
 # Importa el módulo game_data
 from game_data import *
 
-# Importa el módulo random
+# Importa el módulo random para generar números aleatorios
 import random
 
-# Importa el módulo os
+# Importa el módulo os para interactuar con el sistema operativo
 import os
 
 # Selecciona un elemento aleatorio de la lista data y lo asigna a element_A
@@ -17,26 +17,23 @@ element_A=random.choice(data)
 # Selecciona otro elemento aleatorio de la lista data y lo asigna a element_B
 element_B=random.choice(data)
 
-
-
 # Define la función compare que compara dos elementos
 def compare(element_A, element_B):
-
-
 
     # Accede al número de seguidores de los elementos
     follower_count_A=element_A["follower_count"]
     follower_count_B=element_B["follower_count"]
 
+    # Si los elementos son iguales, selecciona un nuevo elemento B
     if element_A==element_B:
         element_B=random.choice(data)
         
     # Compara los números de seguidores de los dos elementos
     elif follower_count_B>follower_count_A:
-        
+        # Si el elemento B tiene más seguidores, devuelve "B"
         return "B"
     else:
-        
+        # Si el elemento A tiene más seguidores, devuelve "A"
         return "A"
 
 # Define la función game que ejecuta el juego
@@ -47,13 +44,6 @@ def game(element_A, element_B):
     game=True
     score=0
     while game==True:
-
-        # # Imprime los elementos A y B
-        # print(f" The element A is {element_A}")
-        # print(f" The element B is {element_B}")
-        print()
-
-             
 
         # Accede al número de seguidores de los elementos
         follower_count_A=element_A["follower_count"]
@@ -83,6 +73,7 @@ def game(element_A, element_B):
             
             element_B=random.choice(data)
             
+            # Si los elementos son iguales, selecciona un nuevo elemento B
             if element_A==element_B:
                 element_B=random.choice(data)
 
