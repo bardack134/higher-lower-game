@@ -22,13 +22,11 @@ element_B=random.choice(data)
 # Define la función compare que compara dos elementos
 def compare(element_A, element_B):
 
-    # Obtiene las posiciones de los elementos en la lista data
-    position_element_A=data.index(element_A, 0, 49)
-    position_element_B=data.index(element_B, 0, 49)
+
 
     # Accede al número de seguidores de los elementos
-    follower_count_A=data[position_element_A]["follower_count"]
-    follower_count_B=data[position_element_B]["follower_count"]
+    follower_count_A=element_A["follower_count"]
+    follower_count_B=element_B["follower_count"]
 
     if element_A==element_B:
         element_B=random.choice(data)
@@ -50,9 +48,9 @@ def game(element_A, element_B):
     score=0
     while game==True:
 
-        # Imprime los elementos A y B
-        print(f" The element A is {element_A}")
-        print(f" The element B is {element_B}")
+        # # Imprime los elementos A y B
+        # print(f" The element A is {element_A}")
+        # print(f" The element B is {element_B}")
         print()
 
              
